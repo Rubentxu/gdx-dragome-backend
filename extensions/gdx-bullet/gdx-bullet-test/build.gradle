@@ -1,10 +1,5 @@
 apply plugin: 'java'
 
-archivesBaseName = 'gdx-bullet-test'
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 sourceSets {
     main {
         java {
@@ -15,6 +10,9 @@ sourceSets {
 }
 
 dependencies {
+    compile project(":tests:gdx-tests-dragome")
+    compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+    compile "com.badlogicgames.gdx:gdx-bullet:$gdxVersion"
     testCompile group: 'junit', name: 'junit', version: '4.11'
 
 }

@@ -1,1 +1,2 @@
-include 'backends:gdx-backend-dragome', 'extensions:gdx-bullet', 'extensions:gdx-bullet-dragome', 'extensions:gdx-bullet-test', 'tests'
+include 'backends:gdx-backend-dragome', 'extensions:gdx-bullet:gdx-bullet', 'extensions:gdx-bullet:gdx-bullet-build', 'extensions:gdx-bullet:gdx-bullet-build:jni',
+        'extensions:gdx-bullet:gdx-bullet-dragome', 'extensions:gdx-bullet:gdx-bullet-test', 'tests:gdx-tests-dragome'

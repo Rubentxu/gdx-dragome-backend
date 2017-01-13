@@ -1,7 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 sourceSets {
     main {
@@ -12,12 +12,23 @@ sourceSets {
     }
 }
 
+war {
+    archiveName 'test.war'
+    webAppDirName = 'webapp'
+}
+
 dependencies {
-    compile project(":gdx-backend-dragome")
-    compile project(":gdx-bullet-dragome")
+    compile project(":backends:gdx-backend-dragome")
+    compile project(":extensions:gdx-bullet:gdx-bullet-dragome")
     compile "com.dragome:dragome-web:$dragomeVersion"
     compile "com.dragome:dragome-bytecode-js-compiler:$dragomeVersion"
     compile "com.dragome:dragome-w3c-standards:$dragomeVersion"
+    providedCompile "javax.servlet:javax.servlet-api:3.0.1"
     testCompile group: 'junit', name: 'junit', version: '4.11'
 
+}
+
+jettyRun {
+    contextPath = '/'
+    scanIntervalSeconds = 2
 }

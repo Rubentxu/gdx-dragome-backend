@@ -12,6 +12,9 @@ allprojects {
     apply plugin: "idea"
 
 
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
     ext {
         gdxVersion = '1.9.5'
         dragomeVersion ='0.96-beta4'
@@ -25,11 +28,39 @@ allprojects {
     }
 
     repositories {
+        mavenLocal()
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
-        maven { url "https://raw.github.com/dragome/dragome/master/maven/" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+
+    }
+//    dependencies {
+//
+//        classpath 'me.tatarka:gradle-retrolambda:3.4.0'
+//    }
+}
+
+allprojects {
+    apply plugin: "eclipse"
+    apply plugin: "idea"
+
+    version = '1.0'
+    ext {
+        appName = "SuperMariano"
+        gdxVersion = '1.9.5'
+        roboVMVersion = '2.3.0'
+        box2DLightsVersion = '1.4'
+        aiVersion = '1.8.0'
+    }
+
+    repositories {
         mavenLocal()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+
+
     }
 
 }
