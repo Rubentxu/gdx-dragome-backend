@@ -1,0 +1,57 @@
+apply plugin: 'java'
+group 'gdx-backend-dragome'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext {
+    gdxVersion = '1.9.5'
+    dragomeVersion ='0.96-beta4'
+}
+
+allprojects {
+    version '0.1.0'
+
+    apply plugin: 'java'
+    apply plugin: "eclipse"
+    apply plugin: "idea"
+
+    idea {
+        module {
+            downloadJavadoc = true
+            downloadSources = true
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+        maven { url "https://raw.github.com/dragome/dragome/master/maven/" }
+        mavenLocal()
+    }
+
+}
+//
+//class MyDownload extends DefaultTask {
+//    @Input
+//    String sourceUrl
+//
+//    @OutputFile
+//    File target
+//
+//    @TaskAction
+//    void download() {
+//        ant.get(src: sourceUrl, dest: target)
+//    }
+//}
+//
+//task downloadSomething(type: MyDownload) {
+//    sourceUrl = 'https://github.com/Rubentxu/Entitas-Java/releases/download/Entitas-0.1.0/Entitas-Java-0.1.0.jar'
+//    target = file('build/entitas-java.jar')
+//}
+//
+//jar.dependsOn downloadSomething
+
+
+

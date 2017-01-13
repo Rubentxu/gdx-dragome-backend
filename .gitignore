@@ -51,3 +51,4 @@ libs/
 **/jni/*
 !**/jni/src
 !**/jni/emscripten
+

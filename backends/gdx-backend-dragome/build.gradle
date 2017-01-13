@@ -1,0 +1,25 @@
+apply plugin: 'java'
+
+archivesBaseName = 'gdx-backend-dragome'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/'
+            srcDirs 'emu'
+
+        }
+    }
+}
+
+dependencies {
+    compile group: 'com.dragome', name: 'dragome-web', version: $dragomeVersion
+    compile group: 'com.dragome', name: 'dragome-bytecode-js-compiler', version: $dragomeVersion
+    compile group: 'com.dragome', name: 'dragome-js-jre', version: $dragomeVersion
+    compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+}

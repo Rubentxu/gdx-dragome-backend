@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+archivesBaseName = 'gdx-bullet-test'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/'
+
+        }
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+}
