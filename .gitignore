@@ -52,3 +52,7 @@ libs/
 !**/jni/src
 !**/jni/emscripten
 
+
+gradle/
+.gradle
+gradlew*

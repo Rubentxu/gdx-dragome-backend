@@ -17,7 +17,7 @@ sourceSets {
 dependencies {
     compile project(":gdx-backend-dragome")
     compile "com.badlogicgames.gdx:gdx:$gdxVersion"
-    compile group: 'com.dragome', name: 'dragome-js-commons', version: $dragomeVersion
+    compile "com.dragome:dragome-js-commons:$dragomeVersion"
     testCompile group: 'junit', name: 'junit', version: '4.11'
 
 }

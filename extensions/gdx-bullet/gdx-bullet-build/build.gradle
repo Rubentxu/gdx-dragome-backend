@@ -1,7 +1,5 @@
 apply plugin: 'java'
 
-archivesBaseName = 'gdx-bullet'
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 

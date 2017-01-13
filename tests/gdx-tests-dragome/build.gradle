@@ -15,9 +15,9 @@ sourceSets {
 dependencies {
     compile project(":gdx-backend-dragome")
     compile project(":gdx-bullet-dragome")
-    compile group: 'com.dragome', name: 'dragome-web', version: $dragomeVersion
-    compile group: 'com.dragome', name: 'dragome-bytecode-js-compiler', version: $dragomeVersion
-    compile group: 'com.dragome', name: 'dragome-w3c-standards', version: $dragomeVersion
+    compile "com.dragome:dragome-web:$dragomeVersion"
+    compile "com.dragome:dragome-bytecode-js-compiler:$dragomeVersion"
+    compile "com.dragome:dragome-w3c-standards:$dragomeVersion"
     testCompile group: 'junit', name: 'junit', version: '4.11'
 
 }

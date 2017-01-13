@@ -4,17 +4,18 @@ group 'gdx-backend-dragome'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-ext {
-    gdxVersion = '1.9.5'
-    dragomeVersion ='0.96-beta4'
-}
-
 allprojects {
     version '0.1.0'
 
     apply plugin: 'java'
     apply plugin: "eclipse"
     apply plugin: "idea"
+
+
+    ext {
+        gdxVersion = '1.9.5'
+        dragomeVersion ='0.96-beta4'
+    }
 
     idea {
         module {
